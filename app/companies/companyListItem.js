@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import FlatButton from 'material-ui/FlatButton'
-
 
 // Companies List Item component
 class CompanyListItem extends React.Component {
@@ -21,7 +19,7 @@ class CompanyListItem extends React.Component {
             fontSize: '28px'
           }}>{this.props.company.name}</h1>
           <p>Employees: {this.props.company.employees}, Divisions: {this.props.company.divisions}</p>
-          <Link to={`/companies/${this.props.company.id}`}>TEST</Link>
+          <Link to={`/companies/${this.props.company.id}`}>More info</Link>
       </div>
     )
   }
