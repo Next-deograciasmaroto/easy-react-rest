@@ -3,11 +3,17 @@ var data = require('./data.js')
 
 
 var app = express()
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 var router = express.Router()
 
 router.get('/companies', function(req, res) {
-  res.json({ message: 'hola!' })
+  res.json(data.companies)
 })
 
 app.use('/api/v1', router)

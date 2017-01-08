@@ -7,18 +7,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Material UI
-import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import AppBar from 'material-ui/AppBar'
 
 // Custom components
-import CompaniesList from './companies/companiesList.js'
+import CompaniesContainer from './companies/companiesContainer.js'
 
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin()
+injectTapEventPlugin();
 
 const Main = () => (
   <MuiThemeProvider>
@@ -27,7 +27,7 @@ const Main = () => (
         title="My awesome company manager"
         showMenuIconButton={false}
       />
-      <CompaniesList />
+      <CompaniesContainer />
     </div>
   </MuiThemeProvider>
 )

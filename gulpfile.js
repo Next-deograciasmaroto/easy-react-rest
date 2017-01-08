@@ -36,7 +36,7 @@ gulp.task('deploy', function (){
 
 // Watcher
 gulp.task('watch', function () {
-	gulp.watch(['./app/*.js'], ['scripts'])
+	gulp.watch(['./app/*.js', './app/**/*.js'], ['scripts'])
 })
 
 // Default task
