@@ -23,7 +23,27 @@ var data = function() {
         divisions: 2
       }
     ]
-  }
+  },
+  divisions: [
+    {
+      id: 11,
+      name: 'Research',
+      employees: 3,
+      description: 'Lorem ipsum dolor sit amet, consectetuer adipiscin'
+    },
+    {
+      id: 12,
+      name: 'DevOps',
+      employees: 5,
+      description: 'Lorem ipsum dolor sit amet, consectetuer adipiscin'
+    },
+    {
+      id: 13,
+      name: 'QA',
+      employees: 1,
+      description: 'Lorem ipsum dolor sit amet, consectetuer adipiscin'
+    }
+  ]
 }
 
 module.exports = data()

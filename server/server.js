@@ -13,7 +13,11 @@ app.use(function(req, res, next) {
 var router = express.Router()
 
 router.get('/companies', function(req, res) {
-  res.json(data.companies)
+  if(req.param('id')) {
+    res.json(data.divisions)
+  } else {
+    res.json(data.companies)
+  }
 })
 
 app.use('/api/v1', router)

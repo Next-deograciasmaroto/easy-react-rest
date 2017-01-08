@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CompanyItem from './companyItem.js'
+import CompanyListItem from './companyListItem.js'
 
 // Companies List component
 class CompaniesList extends React.Component {
@@ -10,13 +10,13 @@ class CompaniesList extends React.Component {
 
   renderCompany(company) {
     return (
-      <CompanyItem key={company.id} company={company} />
+      <CompanyListItem key={company.id} company={company} />
     )
   }
 
   render() {
     return (
-      <div>
+      <div className='companies-list'>
         {this.props.companies.map( (company) => this.renderCompany(company) )}
       </div>
     )

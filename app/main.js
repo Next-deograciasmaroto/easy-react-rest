@@ -5,6 +5,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 
 // Material UI
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -14,6 +15,7 @@ import AppBar from 'material-ui/AppBar'
 
 // Custom components
 import CompaniesContainer from './companies/companiesContainer.js'
+import CompanyElement from './companies/companyElement.js'
 
 
 // Needed for onTouchTap
@@ -32,10 +34,15 @@ const Main = () => (
   </MuiThemeProvider>
 )
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
   ReactDOM.render(
-    <Main />,
+    <Router history={browserHistory}>
+      <Route path="/" component={Main} />
+      <Route path="/companies/:id" component={CompanyElement} />
+    </Router>,
     document.getElementById('mount')
   )
 
