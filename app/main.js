@@ -6,8 +6,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+// Material UI
+import injectTapEventPlugin from 'react-tap-event-plugin'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
+import AppBar from 'material-ui/AppBar'
+
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin()
+
 const Main = () => (
-  <div> Main app </div>
+  <MuiThemeProvider>
+    <div className="main-app">
+      <AppBar
+        title="My awesome company manager"
+        showMenuIconButton={false}
+      />
+      <CompaniesList />
+      Main app
+    </div>
+  </MuiThemeProvider>
 )
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,4 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
     <Main />,
     document.getElementById('mount')
   )
+
 })
