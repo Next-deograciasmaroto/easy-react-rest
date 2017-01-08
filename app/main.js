@@ -12,6 +12,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import AppBar from 'material-ui/AppBar'
 
+// Custom components
+import CompaniesList from './companies/companiesList.js'
+
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -25,7 +28,6 @@ const Main = () => (
         showMenuIconButton={false}
       />
       <CompaniesList />
-      Main app
     </div>
   </MuiThemeProvider>
 )
